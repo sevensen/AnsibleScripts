@@ -1,0 +1,14 @@
+---
+- hosts: all
+  user: ubuntu
+  sudo: yes
+  tasks:
+    - name: remove files
+      shell: rm -r /var/www/html/
+
+    - name: App | Cloning repos + submodules
+      git: repo=https://github.com/sevensen/sev-test.git
+        dest="/var/www/html/"
+        force="yes"
+        accept_hostkey="yes"
+
