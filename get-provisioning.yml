@@ -7,4 +7,6 @@
       git: repo=https://github.com/sevensen/AnsibleScripts.git
         dest="/etc/ansible/scripts"
 
+    - name: copy public key
+      shell: sudo cp /etc/ansible/scripts/sev-test.key ~/.ssh/
 
