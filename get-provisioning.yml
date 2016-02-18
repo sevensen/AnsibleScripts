@@ -1,9 +1,10 @@
 ---
 - hosts: localhost
   user: ubuntu
+  sudo: yes
   tasks:
     - name: App | Cloning repos + submodules
       git: repo=https://github.com/sevensen/AnsibleScripts.git
-        dest="/etc/ansible/"
+        dest="/etc/ansible/scripts"
 
 
